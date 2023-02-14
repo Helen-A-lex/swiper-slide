@@ -274,3 +274,61 @@
 //   return result;
 // }
 // console.log(checkForSpam("Get best sale offers now!"));
+
+// 2 модуль
+// патерн раннє повернення
+1; // function checkAge(age) {
+//   if (age >= 18) {
+//     // Change this line
+//     return "You are an adult";
+//   }
+
+//   return "You are a minor";
+// }
+// console.log(checkAge("20"));
+
+2; //  function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   // Change code below this line
+
+//   if (password === ADMIN_PASSWORD) {
+//     return "Welcome!";
+//   }
+
+//   return "Access denied, wrong password!";
+//   // Change code above this line
+// }
+
+// патерн раннє повернення
+3; // function checkStorage(available, ordered) {
+//   // Change code below this line
+
+//   if (ordered === 0) {
+//     return "Your order is empty!";
+//   }
+//   if (available > ordered) {
+//     return "Your order is too large, not enough goods in stock!";
+//   }
+
+//   return "The order is accepted, our manager will contact you";
+
+//   // Change code above this line
+// }
+// console.log(checkStorage("70, 0"));
+
+// Масив, що повертає перший і останній елемент масиву
+
+9; // function getExtremeElements(array) {
+//   return [array[0], array[array.length - 1]];
+// }
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+
+// Розбиття повідомлення по деліметру
+10; // function splitMessage(message, delimiter) {
+//   let words;
+//   // Change code below this line
+//   words = message.split(delimiter);
+//   // Change code above this line
+//   return words;
+// }
+// console.log(splitMessage("Mango", ""));
