@@ -332,3 +332,65 @@
 //   return words;
 // }
 // console.log(splitMessage("Mango", ""));
+
+11;
+// function calculateEngravingPrice(message, pricePerWord) {
+//   return message.split(" ").length * pricePerWord;
+// }
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+
+12;
+// function makeStringFromArray(array, delimiter) {
+//   let string;
+//   // Change code below this line
+//   string = array.join(delimiter);
+
+//   // Change code above this line
+//   return string;
+// }
+// console.log(
+//   makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " ")
+// );
+
+13; // Привести рядок до масиву, розділити по пробілу, потім повернути до рядка з розділенням тире, а потім до нижнього регістру//
+// function slugify(title) {
+//   return title.split(" ").join("-").toLowerCase();
+// }
+// console.log(slugify("Arrays for begginers"));
+
+14; // const fruits = ["apple", "plum", "pear", "orange", "banana"];
+
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, 4);
+// const lastThreeEls = fruits.slice(-3);
+// console.log(nonExtremeEls);
+
+// Конкат масивів(додавання)
+15; // const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"];
+// const newClients = ["Peach", "Houston"];
+
+// const allClients = oldClients.concat(newClients);
+// console.log(allClients);
+
+// (0, maxLength) - це  масив довжиною maxLength елементів, а slice робить копію;
+16; // function makeArray(firstArray, secondArray, maxLength) {
+//   // Change code below this line
+//   const NewArray = firstArray.concat(secondArray);
+//   if (NewArray.length > maxLength) {
+//     return NewArray.slice(0, maxLength);
+//   }
+//   return NewArray;
+//   // Change code above this line
+// }
+// console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3));
+// function calculateTotal(number) {
+//   // Change code below this line
+//   let total = 0;
+//   for (let i = 1; i < number; i += 1) {
+//     total += i;
+//   }
+//   return total;
+
+//   // Change code above this line
+// }
+// console.log(calculateTotal(24));
