@@ -394,3 +394,149 @@
 //   // Change code above this line
 // }
 // console.log(calculateTotal(24));
+
+18; //  сума чисел від 1 до намбер 2=1+1
+// function calculateTotal(number) {
+//   let total = 0;
+//   for (let i = 1; i <= number; i += 1) {
+//     total += i;
+//   }
+//   return total;
+// }
+// console.log(calculateTotal(28));
+
+// Перебрати масив поелементно
+19; // const fruits = ["apple", "plum", "pear", "orange"];
+
+// for (let i = 0; i < fruits.length; i += 1) {
+//   // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+
+// Рахувати суму чисел у масиві
+20; // function calculateTotalPrice(order) {
+//   let total = 0;
+
+//   for (let i = 0; i < order.length; i += 1) {
+//     total += order[i];
+//   }
+
+//   return total;
+// }
+// console.log(calculateTotalPrice([1, 0, 9, 4]));
+
+// Прийом рядка, розділеного по пробілу.Визначення
+// найдовшого слова в рядку(якщо довжина елемента рядка більша
+//     за довжину найдовшого слова, то найдовше слово і є той елемент)
+21; // function findLongestWord(string) {
+//   const stringArr = string.split(" ");
+//   let longestWord = stringArr[0];
+
+//   for (let i = 0; i < stringArr.length; i += 1) {
+//     if (stringArr[i].length > longestWord.length) {
+//       longestWord = stringArr[i];
+//     }
+//   }
+
+//   return longestWord;
+// }
+// console.log(findLongestWord("Google do a roll"));
+
+22; //  Потрібно повернути масив чисел від мін до макс
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];- оголошуємо пустий масив
+//   // Change code below this
+//   for (let i = min; i <= max; i += 1) {      якщо елемент менший макс, то пушим цей елемент в масив
+//     numbers.push(i);
+//   }
+
+//   // Change code above this line
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(29, 34));
+
+23; // Фільтрування масиву
+// function filterArray(numbers, value) {
+//   const newArray = [];   створюємо новий масив
+//   for (let i = 0; numbers.length > i; i += 1) {
+//     if (numbers[i] > value) {   якщо  елемент масиву намбер більший за значення, то в новий масив додається цей елемент
+//       newArray.push(numbers[i]);
+//     }
+//   }
+//   return newArray;
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+// перевірка на знаходження елемента в масиві
+24; // function checkFruit(fruit) {
+//   const fruits = ["apple", "plum", "pear", "orange"];
+
+//   return fruits.includes(fruit);
+// }
+// console.log(checkFruit("grapes"));
+
+25; //Функція, що повертає новий масив, який складається з однакових елементів двох попередніх масивів
+// function getCommonElements(array1, array2) {
+//   const array3 = [];
+
+//   for (let i = 0; i < array1.length; i += 1) {          перебираємо перший масив
+//     if (array2.includes(array1[i])) {                   якщо масив2 включає елементи масиву 1, то в новий масив
+//                                                         пушаться ці елементи з масиву1 (перебрані)
+
+//       array3.push(array1[i]);
+//     }
+//   }
+
+//   return array3;
+// }
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+
+// Цикл фор (коротенький)
+26; // function calculateTotalPrice(order) {
+//   let total = 0;
+//   // Change code below this line
+//   for (const item of order) {
+//     total += item;
+//   }
+//   // for (let i = 0; i < order.length; i += 1) {
+//   //   total += order[i];
+//   // }
+
+//   return total;
+// }
+// console.log(calculateTotalPrice([164, 48, 291]));
+
+27; // Рефакторинг задачі 23 про фільтрацію масиву
+//  function filterArray(numbers, value) {
+//     // Change code below this line
+//     const filteredNumbers = [];
+//     for (number of numbers) {
+
+//         if (number > value) {
+//             filteredNumbers.push(number);
+//         }
+//     }
+// }
+//   return filteredNumbers;
+
+28; // Операція за модулем % (поділити)
+// const a = 3 % 1; а=0  остачі від ділення
+// const b = 4 % 3; в=1
+// const c = 11 % 4; с=3
+// const d = 12 % 7; d=5
+// const e = 8 % 3;  e=2
+
+29; //  Функція повертає масив, усіх парних чисел від start до end.
+// function getEvenNumbers(start, end) {
+//   const array = [];
+
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       array.push(i);
+//     }
+//   }
+
+//   return array;
+// }
+// console.log(getEvenNumbers(4, 15));
