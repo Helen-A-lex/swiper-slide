@@ -540,3 +540,44 @@
 //   return array;
 // }
 // console.log(getEvenNumbers(4, 15));
+
+30; //Запис першого числа від старт до енд, що ділиться на 5
+// const start = 6;
+// const end = 27;
+// let number;
+
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+// console.log(number);
+
+31; // Використання ретурн, що перериває виконання і циклу і функції , а брейк тільки перериває цикл
+// function findNumber(start, end, divisor) {
+//   let number;
+
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       return i;
+//     }
+//   }
+
+//   return number;
+// }
+// console.log(findNumber(8, 10, 2));
+
+32; // function includes(array, value) {
+//   // Change code below this line
+//   for (let number of array) {
+//     if (number === value) {
+//       return true;
+//     }
+//   }
+
+//   return false;
+// }
+// console.log(
+//   includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
+// );
