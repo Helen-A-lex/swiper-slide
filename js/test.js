@@ -582,7 +582,7 @@
 //   includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
 // );
 
-// 3 модуль Об'єкти
+// **************************3 модуль Об'єкти
 
 // const apartment = {
 //   imgUrl: "https://via.placeholder.com/640x480",
@@ -629,7 +629,7 @@
 // };
 // console.log(credentials);
 
-10;//  Повернення масиву ключів та масиву властивостей
+10; //  Повернення масиву ключів та масиву властивостей
 // const apartment = {
 //   descr: "Spacious apartment in the city center",
 //   rating: 4,
@@ -644,3 +644,310 @@
 // }
 // console.log(keys);
 // console.log(values);
+
+// перевірка на власні властивості
+
+11; // const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//   if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);
+//   }
+// }
+
+// У змінній  propCount зберігається кількість властивостей об'єкта
+12;
+// function countProps(object) {
+//   let propCount = 0;
+//   // Change code below this line
+//   for (const key in object) {
+//     if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//     }
+//   }
+//   // Change code above this line
+//   return propCount;
+// }
+// console.log(countProps({ mail: "poly@mail.com", isOnline: true, score: 500 }));
+
+13;
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+
+// const keys = Object.keys(apartment);
+// for (key of keys) {
+//   values.push(apartment[key]);
+// }
+// console.log(values);
+// console.log(keys);
+
+14; //  Рефакторинг задачі 12
+// function countProps(object) {
+//   // Change code below this line
+//   let propCount = 0;
+//   const keys = Object.keys(object);
+//   for (const key of keys) {
+//     propCount += 1;
+//   }
+
+//   // Change code above this line
+//   return propCount;
+// }
+
+15; //  Функція додає значення зарплат усіх робітників
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const values = Object.values(salaries);
+//   for (const value of values) {
+//     totalSalary += value;
+//   }
+//   // Change code above this line
+//   return totalSalary;
+// }
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+
+16; // Перебір масиву об'єктів. Значення властивостей кожного об'єкта можна отримати,
+//     використовуючи синтаксис «через крапку», оскільки в кожному об'єкті
+// набір властивостей та їх імена будуть однакові, відрізняються тільки значення color.hex
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// Функція шукає об'єкт продукту з таким ім'ям(властивість name)
+// в масиві products і повертає його ціну(властивість price). Якщо немає такого імені повертає нул.
+18; // const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getProductPrice(productName) {
+//   for (const product of products) {
+//     if (product.name === productName) return product.price;
+//   }
+//   return null;
+// }
+// console.log(getProductPrice("Engine"));
+
+19; // Функція повертає масив з усіма властивостями ключів в об'єкті. кщо немає такої властивості у ключа, то
+// повернеться пустий масив.
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   const productValues = [];
+//   for (const product of products) {             перебираємо продукти в продактс
+//     for (const key in product) {                а тепер перебираємо ключі кожного продукту (так як це обєкт то фор ін цикл)
+//       if (key === propName) {                   якщо ключ властивості дорівнює ключу властивості, то в новий масив пушиться значення ключа
+//         productValues.push(product[key]);
+//       }
+//     }
+//   }
+
+//   return productValues;
+
+//   // Change code above this line
+// }
+// console.log(getAllPropValues("quantity"));
+
+20; //  Функція повертає загальну вартість (ціна * кількість) товару з таким ім'ям з масиву products
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Change code below this line
+//   let totalPrice = 0;
+// for(product of products){
+//   if(product.name === productName){
+//     totalPrice = product.price * product.quantity;
+//   }
+// }
+// return totalPrice;
+
+// }
+
+21; // Деструктуризація обєкту highTemperatures
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+
+// const { yesterday, today, tomorrow } = highTemperatures;
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+// console.log(meanTemperature);
+
+22;
+// задання необовязкової властивості ісon, що містить значення за замовчуванням(дефолтне)
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const {
+//   yesterday,
+//   today,
+//   tomorrow,
+//   icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+// } = highTemperatures;
+// // const yesterday = highTemperatures.yesterday;
+// // const today = highTemperatures.today;
+// // const tomorrow = highTemperatures.tomorrow;
+// // const icon = highTemperatures.icon;
+
+// // Change code above this line
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+23; // Зміна ім'я змінної, в яку передаватиметься значення під час деструктуризації
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Change code below this line
+// const {
+//   yesterday: highYesterday,
+//   today: highToday,
+//   tomorrow: highTomorrow,
+//   icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+// } = highTemperatures;
+// // const highYesterday = highTemperatures.yesterday;
+// // const highToday = highTemperatures.today;
+// // const highTomorrow = highTemperatures.tomorrow;
+// // const highIcon = highTemperatures.icon;
+
+// // Change code above this line
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+
+24; // Деструктуризація у циклі фор оф (в місці оголошення змінної color). Перероблене 16 завдання
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const { hex, rgb } of colors) {
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+
+25; //  Деструктуризація обєкту forecast(заміна змінних, звертання до вкладених
+// властивостей та дефолтні значення icon: tomorrowIcon)
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: "https://www.flaticon.com/svg/static/icons/svg/861/861059.svg",
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Change code below this line
+// const {
+//   today: {
+//     low: lowToday,
+//     high: highToday,
+//     icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//   },
+//   tomorrow: {
+//     low: lowTomorrow,
+//     high: highTomorrow,
+//     icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+//   },
+// } = forecast;
+
+26; //  Деструктуризація в функції
+// function calculateMeanTemperature(forecast) {
+//   // const todayLow = forecast.today.low;
+//   // const todayHigh = forecast.today.high;
+//   // const tomorrowLow = forecast.tomorrow.low;
+//   // const tomorrowHigh = forecast.tomorrow.high;
+
+//   // Change code above this line
+//   const {
+//     today: { low: todayLow, high: todayHigh },
+//     tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+//   } = forecast;
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+// console.log(
+//   calculateMeanTemperature({
+//     today: { low: 28, high: 32 },
+//     tomorrow: { low: 25, high: 29 },
+//   })
+// );
+
+27; //  Використання ...spread(розподілення, розпаковка обєктів)
+// і методів Math.max() та Math.min()
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// console.log(...scores);
+
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+28; //  ...spread склеїли масиви в один
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);    визначаємо найбільший бал
+// const worstScore = Math.min(...allScores);   визначаємо найменший бал
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
