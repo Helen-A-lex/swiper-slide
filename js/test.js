@@ -951,3 +951,137 @@
 // console.log(allScores);
 // console.log(bestScore);
 // console.log(worstScore);
+
+// Значення ключів перезапишеться і буде : theme: "light", public: false, withPassword: true,
+//     minNumberOfQuestions: 10, timePerQuestion: 30,
+29; // const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+30; // Все, що зліва від спредуу має низький авторитет, тобто category, priority у object
+// за замовчуванням, спред data перезапише їх, коли в неї прийдуть такі самі властивості,
+//     і completed  справа зі змінної.
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   const object = { category, priority, ...data, completed };
+//   // Change code above this line
+//   return object;
+// }
+
+31; //  ...args прийом будь-якої кількості аргументів у функцію, і виводимо суму всіх її аргументів
+// function add(...args) {
+//   // Change code above this line
+//   let total = 0;
+//   for (const number of args) {
+//     total += number;
+//   }
+//   return total;
+// }
+
+32; //                       15         всі інші аргументи
+// function addOverNum(firstNumber, ...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     if (arg > firstNumber) {
+//       total += arg;
+//     }
+//   }
+
+//   return total;
+//   // Change code above this line
+// }
+// console.log(addOverNum(50, 15, 27));
+// console.log(addOverNum(15, 32, 6, 13, 19, 8));Функція рахує суму тих аргументів,
+// що більші за перше стояче число, тобто перше число 15, а більше за нього 32+19=51
+
+33; // У новий масив потрапляють ті числа з array, які є в ...args(а це завжди масив)
+// function findMatches(array, ...args) {
+//   const matches = [];
+
+//   // Change code above this line
+//   for (const arg of args) {
+//     if (array.includes(arg)) {
+//       matches.push(arg);
+//     }
+//     return matches;
+//   }
+// }
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+
+35; //  this то bookShelf, this.books - звертання до властивості books
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     // Change code below this line
+//     const bookIndex = this.books.indexOf(oldName);   шукаємо індекс старої назви книжки
+//       this.books.splice(bookIndex, 1, newName);        заміняємо стару назву на нову,
+//                                                        підставляємо індекс старої назви,видалємо 1 елемент, заміняємо назву
+
+//     // Change code above this line
+//   },
+// }
+
+36;
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   // Change code below this line
+//   getPotions() {                   метод повертає значення властивості potions
+//     return this.potions;
+//   },
+//   // Change code above this line
+// };
+// console.log(atTheOldToad.getPotions()); звертання до методу
+
+37;
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   addPotion(potionName) {
+//     // Change code below this line
+//     this.potions.push(potionName);       додали до масиву potions один елемент potionName в кінець
+
+//     // Change code above this line
+//   },
+// }
+
+39;
+// Видалення potionName з переліку масиву рotions
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   removePotion(potionName) {
+//     // Change code below this line
+//     const potionIndex = this.potions.indexOf(potionName); спочатку знайшли індекс
+
+//     this.potions.splice(potionIndex, 1);                  потім удалили 1, починаючи з індексу рotionName
+
+//     // Change code above this line
+//   },
+// };
+
+40;
+// Заміна оldName на пewName
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   updatePotionName(oldName, newName) {
+//     // Change code below this line
+//     const potionIndex = this.potions.indexOf(oldName); як у завданні 35 однаково
+
+//     this.potions.splice(potionIndex, 1, newName);
+
+//     // Change code above this line
+//   },
+// };
