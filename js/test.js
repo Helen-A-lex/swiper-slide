@@ -1085,3 +1085,41 @@
 //     // Change code above this line
 //   },
 // };
+
+41; //  Дуже важке завдання!
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {                 перебираємо всі обєкти масиву potions
+//       if (potion.name === newPotion.name) {              якщо імя  нового зілля збігається з тими назвами, що вже є, то видається помилка.
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//       }
+//     }
+//     this.potions.push(newPotion);                        а якщо збігів немає то назва нового зілля пушиться в масив potions
+//   },
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i++) {    перебираємо всі обєкти у масиві, поки не закінчиться їх кількіть
+//       if (potionName === this.potions[i].name) {       якщо назва елементу обєкта збігається з назвою зілля яке треба видалити,то
+//         return this.potions.splice(i, 1);              у масиві potions вирізається цей елемент з індексом і
+//       }
+//     }
+//     return `Potion ${potionName} is not in inventory!`;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (let i = 0; i < this.potions.length; i++) {          перебираємо елементи в масиві, поки є довжина масиву
+//       if (oldName === this.potions[i].name) {                якщо у масиві об'єктів potions є елемент з властивістю name,який дорівнює oldName
+//         return (this.potions[i].name = newName);             то цей елемент змінює стару назву на нову
+//       }
+//     }
+//     return `Potion ${oldName} is not in inventory!`;
+//   },
+//   // Change code above this line
+// };
