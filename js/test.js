@@ -1123,3 +1123,162 @@
 //   },
 //   // Change code above this line
 // };
+
+// ************************4 модуль*************************
+1;
+// function makePizza() {
+//   return "Your pizza is being prepared, please wait.";
+// }
+// // Change code below this line
+
+// const result = makePizza();             результат виконання функції
+
+// const pointer = makePizza;             посилання на функцію
+// console.log(result);
+// console.log(pointer);
+
+2;
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
+
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+
+// // Chande code below this line
+// function makeMessage(pizzaName, callback) {              колбек параметром функції стає
+//   return callback(pizzaName);                            повернення виклику функції callback і аргументу імя готової піци.
+// }
+// console.log(makeMessage("Ultracheese", deliverPizza));
+
+3;
+// function makePizza(pizzaName, callback) {
+//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   callback(pizzaName);
+// }
+
+// makePizza("Royal Grand", function deliverPizza(pizzaName) {
+//   console.log(`Delivering pizza ${pizzaName}.`);
+// });
+// // Change code below this line
+
+// makePizza("Ultracheese", function eatPizza(pizzaName) {     передача інлайново другим аргументом колбек функції function eatPizza(pizzaName)
+//   console.log(`Eating pizza ${pizzaName}.`);
+// });
+
+4;
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {     приймає у параметрах два колбеки
+//     if (this.pizzas.includes(pizzaName)) {   якщо pizzas містить назву піцци, що замовляють
+//       return onSuccess(pizzaName);            то повертається колбек onSuccess(pizzaName)
+//     }
+
+//     return onError(                           якщо назва відсутня, то повертається колбек onError і аргумент у нього рядок
+//       `There is no pizza with a name ${pizzaName} in the assortment.`
+//     );
+//   },
+// };
+
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+6;
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+
+//   //   for (let i = 0; i < orderedItems.length; i += 1) {
+//   //     totalPrice += orderedItems[i];
+//   //   }
+
+//   // Change code above this line
+//   orderedItems.forEach(function (item) {
+//     totalPrice += item;                            метод фор іч, рахує суму елементів.
+//   });
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+7;
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   // Change code below this line
+
+//   // for (let i = 0; i < numbers.length; i += 1) {
+//   //   if (numbers[i] > value) {
+//   //     filteredNumbers.push(numbers[i]);
+//   //   }
+//   // }
+
+//   // Change code above this line
+//   numbers.forEach(function (number, idx) {
+//     if (number > value) {                     якщо число більше за значення вел ю, то у новий масив пушаться такі елементи
+//       filteredNumbers.push(numbers[idx]);- звертання до елементу в масиві, можна і просто filteredNumbers.push(number)
+//     }
+//   });
+//   return filteredNumbers;
+// }
+
+8;
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+
+//   for (let i = 0; i < firstArray.length; i += 1) {
+//     if (secondArray.includes(firstArray[i])) {
+//       commonElements.push(firstArray[i]);
+//     }
+//   }
+
+//   return commonElements;
+//   // Change code above this line
+//   firstArray.forEach(function (item, idx) {               перебираємо елементи першого масиву
+//     if (secondArray.includes(firstArray[idx])) {      якщо другий масив включає елемент першого масиву
+//       commonElements.push(firstArray[idx]);           то в новий масив пушимо цей елемент
+//     }
+//   });
+// }
+
+9;
+// const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+// // function calculateTotalPrice(quantity, pricePerItem) {
+
+// //   return quantity * pricePerItem;
+// // }
+// переписана звичайна функція на стрілочну
+
+10;
+// const calculateTotalPrice = orderedItems =>         стало. Переписала звичайну функцію і метод форіч на стрілочну функцію
+//   {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach((item) => totalPrice += item);
+
+//   return totalPrice;
+// }
+// // function calculateTotalPrice(orderedItems) {        було
+// //   let totalPrice = 0;
+
+// //   orderedItems.forEach(function (item) {
+// //     totalPrice += item;
+// //   });
+
+// //   return totalPrice;
+// // }
