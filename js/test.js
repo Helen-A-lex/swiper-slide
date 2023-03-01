@@ -1282,3 +1282,22 @@
 
 // //   return totalPrice;
 // // }
+
+13;
+function changeEven(numbers, value) {
+  // Change code below this line
+  // for (let i = 0; i < numbers.length; i += 1) {
+  //   if (numbers[i] % 2 === 0) {
+  //     numbers[i] = numbers[i] + value;
+  //   }
+  // }
+  // Change code above this line
+  const newArray = [];
+  numbers.forEach((number) => {
+    if (number % 2 === 0) {
+      newArray.push(number + value);
+    }
+  });
+  return newArray;
+}
+console.log(changeEven([1, 2, 3, 4, 5], 10));
