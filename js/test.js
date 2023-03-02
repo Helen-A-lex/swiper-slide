@@ -1284,20 +1284,272 @@
 // // }
 
 13;
-function changeEven(numbers, value) {
-  // Change code below this line
-  // for (let i = 0; i < numbers.length; i += 1) {
-  //   if (numbers[i] % 2 === 0) {
-  //     numbers[i] = numbers[i] + value;
-  //   }
-  // }
-  // Change code above this line
-  const newArray = [];
-  numbers.forEach((number) => {
-    if (number % 2 === 0) {
-      newArray.push(number + value);
-    }
-  });
-  return newArray;
-}
-console.log(changeEven([1, 2, 3, 4, 5], 10));
+// function changeEven(numbers, value) {
+//   // Change code below this line
+//   const newArray = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (numbers[i] % 2 === 0) {               якщо елемент масиву парний, то в новий
+//       newArray.push(numbers[i] + value);      масив пушиться цей елементдоданий до числа
+//       continue;                               цикл продовжується
+//     }
+//     newArray.push(numbers[i]);                і в новий масив пушаться всі інші цифри, навіть не парні
+//   }
+//   return newArray;
+// }
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+
+14;
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// // Change code below this line
+// const planetsLengths = planets.map((planet) => planet.length); planet.length масив довжин назв планет
+// console.log(planetsLengths);
+
+15;
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const titles = books.map((book) => book.title); повернення масиву нового з назвами всіх книжок
+// console.log(titles);
+
+16;
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism"],
+//   },
+// ];
+// // Change code below this line
+
+// const genres = books.flatMap((book) => book.genres); book.genres буде масив масивів із жанрами книг, бо
+//                                                      метод flatMap працює з масивом масивів, розгладжуючи в глибину на 1 вкладеність
+
+20;
+!!!(
+  // Пошук унікального предмету без повторень (жанру книги) за допомогою indexOf
+  // const books = [
+  //   {
+  //     title: "The Last Kingdom",
+  //     author: "Bernard Cornwell",
+  //     genres: ["adventure", "history"],
+  //   },
+  //   {
+  //     title: "Beside Still Waters",
+  //     author: "Robert Sheckley",
+  //     genres: ["fiction", "mysticism"],
+  //   },
+  //   {
+  //     title: "Redder Than Blood",
+  //     author: "Tanith Lee",
+  //     genres: ["horror", "mysticism", "adventure"],
+  //   },
+  // ];
+  // // Change code below this line
+  // const allGenres = books.flatMap((book) => book.genres);  масив жанрів всіх книг
+  // console.log(allGenres);
+  // const uniqueGenres = allGenres.filter(            масив жанрів фільтруємо і визначаємо шндекс унікального значення.
+
+  //   (genre, index, array) => array.indexOf(genre) === index
+  // );
+  // console.log(uniqueGenres);
+  // Використовуючи array.indexOf(genre), виконуємо пошук першого збігу поточного елемента genre і отримуємо його індекс в оригінальному масиві усіх жанрів. В параметрі index зберігається індекс поточного елемента genre, перебираючи масив методом filter.
+
+  // Якщо результат indexOf() і значення index рівні - це унікальний елемент, тому що таке значення зустрічається в масиві вперше, і на поточній ітерації фільтр обробляє саме його.
+
+  21
+);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = "Bernard Cornwell";
+// // Change code below this line
+
+// const topRatedBooks = books.filter((book) => book.rating >= MIN_RATING); масив з рейтингом книг, що більші за 8
+// console.log(topRatedBooks);
+// const booksByAuthor = books.filter((book) => book.author === AUTHOR);  масив книг даного автора
+// console.log(booksByAuthor);
+
+22;
+// const getUsersWithEyeColor = (users, color) => users.filter(user => user.eyeColor === color)
+// console.log(getUsersWithEyeColor)    масив користувачів, у яких значення кольру очей збігається з колор
+
+23;
+// const getUsersWithAge = (users, minAge, maxAge) =>
+//   users.filter((user) => user.age >= minAge && user.age <= maxAge);
+// повертає масив користувачів, у яких вік знаходиться між мінейдж до макс ейдж
+
+24;
+// const getUsersWithFriend = (users, friendName) =>
+//   users.filter((user) => user.friends.includes(friendName));
+// повертає масив імен користувачів, в якого є той самий друг.
+
+25; //  це краз приклад, там де я думала як в одній функції писати два метода
+// const getFriends = (users) =>
+//   users
+//     .flatMap((user) => user.friends)          спочатку повертає масив друзів всіх користувачів
+//     .filter((friend, idx, array) => array.indexOf(friend) === idx);  потім шукає друга з унікальними іменами, щоб не повторювались
+//
+
+26;
+// const getActiveUsers = (users) =>
+//   users.filter((user) => user.isActive === true);
+//   повернення масиву користувачів, в яких ключ isActive дорівнює тру
+
+27;
+// const getInactiveUsers = (users) =>
+//   users.filter((user) => user.isActive !== true);
+//  повернення масиву користувачів, в яких ключ isActive дорівнює фолс
+
+28;
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+// ];
+// const BOOK_TITLE = "The Dream of a Ridiculous Man";
+// const AUTHOR = "Robert Sheckley";
+// // Change code below this line
+
+// const bookWithTitle = books.find((book) => book.title === BOOK_TITLE);  утвориться обєкт книги, назва якої відповідає бук тайтл
+// console.log(bookWithTitle);
+// const bookByAuthor = books.find((book) => book.author === AUTHOR);      утвориться обєкт книги,автор якої відповідає змінній автор
+
+34;
+// const players = {
+//   mango: 1270,
+//   poly: 468,
+//   ajax: 710,
+//   kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+
+// const totalPlayTime = playtimes.reduce((acc, number) => {    загальний ігровий час з масиву playtimes
+//   return acc + number;
+// }, 0);
+// console.log(totalPlayTime);
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+
+35;
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((acc, player) => {
+//   return acc + player.playtime / player.gamesPlayed;
+// }, 0);
+// Рахуємо середній час, проведений в одній грі для кожного гравця і отримання загальної суми цих значень
+
+36;
+// const calculateTotalBalance = (users) =>
+//   users.reduce((acc, user) => {
+//     return acc + user.balance;       сума балансів всіх користувачів масиву users
+//   }, 0);
+
+37;
+// const getTotalFriendCount = (users) =>
+//   users.reduce((acc, user) => {
+//     return acc + user.friends.length;  рахується і повертається сума всіх друзів масиву users, а friends -
+//     }, 0);                              це теж масив і щоб додати всю кількість елементів масиву і пишемо .length
+
+38;
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+// ];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort();  створенн копії вихідного масиву, сортування за зростанням (за замовчуванням)
+// console.log(ascendingReleaseDates);
+// const alphabeticalAuthors = [...authors].sort();         створення копії вихідного масиву, сортування за алфавітом
+// console.log(alphabeticalAuthors);
+
+39;
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);  копія вихідного масиву і сорт за зростанням
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);  копія вихіднго масиву і сорт за спаданням
+
+40;
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));  алфавітний порядок
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));  зворотній алфавітний порядок
