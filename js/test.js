@@ -1375,7 +1375,7 @@
   // // Change code below this line
   // const allGenres = books.flatMap((book) => book.genres);  масив жанрів всіх книг
   // console.log(allGenres);
-  // const uniqueGenres = allGenres.filter(            масив жанрів фільтруємо і визначаємо шндекс унікального значення.
+  // const uniqueGenres = allGenres.filter(            масив жанрів фільтруємо і визначаємо індекс унікального значення.
 
   //   (genre, index, array) => array.indexOf(genre) === index
   // );
@@ -1553,3 +1553,101 @@
 // const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));  алфавітний порядок
 
 // const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));  зворотній алфавітний порядок
+
+41;
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const sortedByAuthorName = [...books].sort((a, b) =>      відсортований масив за іменами авторів в
+//   a.author.localeCompare(b.author)                        алфавітному порядку
+// );
+// console.log(sortedByAuthorName);
+
+// const sortedByReversedAuthorName = [...books].sort((a, b) =>  відсортований масив за іменами авторів у
+//   b.author.localeCompare(a.author)                            зворотному алфавітному порядку
+// );
+// console.log(sortedByReversedAuthorName);
+
+// const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);    відсорт.масив рейтингів у порядку зростання
+// console.log(sortedByAscendingRating);
+// const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);   масив рейтингів у порядку спадання
+// console.log(sortedByDescentingRating);
+
+42;
+// const sortByDescendingFriendCount = (users) =>
+//   [...users].sort((a, b) => b.friends.length - a.friends.length);
+// повернення масиву користувачів,відсортованого за спаданням КІЛЬКОСТІ (length) їх друзів
+
+44;
+// const sortByName = (users) =>
+//   [...users].sort((a, b) => a.name.localeCompare(b.name));
+// повернення масиву користувачів, відсортованого за їхніми іменами в алфавітному порядку.
+
+45;
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = books
+//   .filter((book) => book.rating > MIN_BOOK_RATING)       фільтруємо масив за рейтингом книг, що більші за змінну(8)
+//   .map((book) => book.author)                            створюємо масив імен авторів, чиї книги мають відповідний рейтинг
+//   .sort((a, b) => a.localeCompare(b));                   і виставляємо ці імена в алфавітному порядку.
+// console.log(names);
+
+46;
+// const getNamesSortedByFriendCount = users => [...users].sort((a, b) => a.friends.length - b.friends.length).map(user => user.name);
+// спочатку розпиляється новий масив для сортування, потім сортується масив за зростанням кількості друзів(a - b), потім повертає масив імен
+// користувачів (відсортований за зростанням кількості друзів).
+47;
+// const getSortedFriends = (users) =>
+//   users
+//     .flatMap((user) => user.friends)                               робимо з масиву масивів один масив друзів
+//     .filter((friend, idx, array) => array.indexOf(friend) === idx) фільтруємо друзів поелементно і повертаємо масив унікальних імен друзів, що не повторюються
+//     .sort((a, b) => a.localeCompare(b));                           розташовуємо друзів у алфавітному порядку
+48;
+// const getTotalBalanceByGender = (users, gender) =>
+//   users
+//     .filter((user) => user.gender === gender)       відфільтрували масив user по гендерній властивості
+//     .reduce((acc, user) => {                        і повернули загальну суму балансів користувачів, у яких стать збігається з значенням змінної gender
+//       return acc + user.balance;
+//     }, 0);
