@@ -1651,3 +1651,101 @@
 //     .reduce((acc, user) => {                        і повернули загальну суму балансів користувачів, у яких стать збігається з значенням змінної gender
 //       return acc + user.balance;
 //     }, 0);
+
+// **************************************5 модуль*************************************************
+
+5;
+// const ancestor = {
+//   name: "Paul",
+//   age: 83,
+//   surname: "Dawson",
+//   heritage: "Irish",
+// };
+// // Change code below this line
+
+// const parent = Object.create(ancestor);    ланцюжок прототипів.об'єкт ancestor- прототип для parent, а
+// parent.name = "Stacey";
+// parent.surname = "Moore";
+// parent.age = 54;
+
+// const child = Object.create(parent);       parent для child.
+// child.name = "Jason";
+// child.age = 27;
+
+7;
+// class Car {
+//   // Change code below this line
+
+//   constructor(brand, model, price) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   // Change code above this line
+// }
+// const audi = new Car("Audi", "Q3", 36000);   клас Car створює нові обєкти з однойменними властивостями brand, model і price,
+//                                              значеннями яких будуть передані аргументи під час виклику з оператором new.
+
+// console.log(audi);
+// const bmw = new Car("BMW", "X5", 58900);
+// console.log(bmw);
+
+8;
+// class Car {                                   клас приймає один параметр - об'єкт з властивостями brand, model і price,
+//                                               який деструктуризуємо в конструкторі (патерн обєкт параметрів)
+//   // Change code below this line
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+// }
+// console.log(new Car({ brand: "Audi", model: "Q3", price: 36000 }));
+
+9;
+// class Car {
+//   constructor({ brand, model, price }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+//   // Change code below this line
+//   getPrice() {
+//                                                    метод класу, що повертає значення властивості price з
+//   return this.price;                                обєкту, що буде його викликати
+//   }
+
+//   changePrice(newPrice) {                           метод класу, оновлює значення властивості price на
+//     return (this.price = newPrice);                   newPrice в обєкті, що буде його викликати
+
+//   }}
+
+10;
+// class Storage {                             у класа властивість items це масив
+//   constructor(items) {
+//     this.items = items;
+//   }
+
+//   getItems() {             метод класу, що повертає масив поточних товарів у властивості items об'єкта,
+//                           який викликає цей метод.
+//     return this.items;
+//   }
+//   addItem(newItem) {                приймає новий товар newItem і додає його в масив товарів у властивості
+//                                     items об'єкта, який викликає цей метод.
+//     return this.items.push(newItem);
+//   }
+
+//   removeItem(itemToRemove) {                                       видаляє з масиву товарів
+//     return this.items.splice(this.items.indexOf(itemToRemove), 1);  знайшли індекс видаляємого товару
+//   }
+// }
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+11;
