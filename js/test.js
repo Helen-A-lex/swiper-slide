@@ -1133,7 +1133,7 @@
 
 // const result = makePizza();             результат виконання функції
 
-// const pointer = makePizza;             посилання на функцію
+// const pointer = (makePizza);             посилання на функцію
 // console.log(result);
 // console.log(pointer);
 
@@ -1199,7 +1199,7 @@
 // pizzaPalace.order("Big Mike", makePizza, onOrderError);
 // pizzaPalace.order("Vienna", makePizza, onOrderError);
 
-6;
+5;
 // function calculateTotalPrice(orderedItems) {
 //   let totalPrice = 0;
 //   // Change code below this line
@@ -1216,7 +1216,7 @@
 // }
 // console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
 
-7;
+6;
 // function filterArray(numbers, value) {
 //   const filteredNumbers = [];
 //   // Change code below this line
@@ -1236,7 +1236,7 @@
 //   return filteredNumbers;
 // }
 
-8;
+7;
 // function getCommonElements(firstArray, secondArray) {
 //   const commonElements = [];
 //   // Change code below this line
@@ -1256,7 +1256,7 @@
 //   });
 // }
 
-9;
+8;
 // const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
 // // function calculateTotalPrice(quantity, pricePerItem) {
 
