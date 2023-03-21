@@ -2068,3 +2068,64 @@
 // secondToggle.toggle();
 // console.log(secondToggle.on);
 // console.groupEnd("secondToggle");
+
+// ******************************************************
+// Тренування
+// class Client {
+//   #login;
+//   #email;
+//   constructor(login, email) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+//   get login() {
+//     return this.#login;
+//   }
+
+//   set login(newLogin) {
+//     return (this.#login = newLogin);
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     return (this.#email = newEmail);
+//   }
+// }
+// const newClient = new Client(`mango`, `mango@gmail.com`);
+// console.log(newClient.login);
+// console.log((newClient.login = `poly`));
+// console.log(newClient.email);
+// console.log((newClient.email = `poly@gmail.com`));
+//
+// // ************************************************************
+// class Notes {
+//   static Priority() {                      статичний метод Priority, що повертає обєкт
+//     return {
+//       HIGH: "high",
+//       LOW: "low",
+//     };
+//   }
+
+//   constructor() {                                      новий масив
+//     this.items = [];
+//   }
+
+//   addNote(note) {                                     у новий масив додаємо нотатку(а це обєкт)
+//     this.items.push(note);
+//   }
+//   remoweNote(text) {
+//     this.items = this.items.filter((item) => this.items.text !== text);    шукаємо нотатку з відповідним текстом
+//   }
+//   updatePriority(text, newPriority) {
+//     const idx = this.items.findIndex((item) => this.items.text === text); шукаємо індекс нотатки з потрібним текстом, звертаємось до властивості обєкту пріоріті і заміняємо на нову
+//     this.items[idx].priority = newPriority;
+//   }
+// }
+// const newNotes = new Notes();
+// newNotes.addNote({ text: "Note 1", priority: Notes.Priority().HIGH });
+// newNotes.addNote({ text: "Note 2", priority: Notes.Priority().HIGH });
+// console.log(newNotes);
+// newNotes.removeNote("Note 1");
