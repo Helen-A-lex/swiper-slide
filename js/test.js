@@ -2200,3 +2200,64 @@
 
 // listEl.append(...listItem);
 // console.log(listEl);
+
+// Задачки, рішаю сама.
+// const numbers = [4, 89, 7, 10, 99, 5];     масив квадратів чисел
+// const array = [];
+// numbers.forEach((number) => array.push(number * number));
+// console.log(array);
+
+// const numbers = [4, 89, 7, 10, 99, 5];      повернення суми чисел масиву
+// let sum = 0;
+// numbers.forEach((number) => (sum += number));
+// console.log(sum);
+
+// const numbers = [4, 8, 7, 10, 9, 5];                   масив квадратів чисел з використанням меп
+// console.log(numbers.map((number) => number * number));
+
+// const numbers = [4, 8, -7, 10, 9, 5];
+// console.log(numbers.every((number) => number > 0));   чи всі числа більше 0
+// console.log(numbers.some((number) => number < 0));    чи є відємні числа
+
+// const numbers = [4, 8, -7, 10, -9, 5];
+// console.log(numbers.filter((number) => number < 0));      повернути масив чисел відємних
+// console.log(numbers.filter((number) => number % 2 === 0)); масив чисел парних
+
+// const string = [                  поверне масив, де довжина його елементів менше 5
+//   "teacher",
+//   "painter",
+//   "engineer",
+//   "doctor",
+//   "policeman",
+//   "dant",
+// ];
+// const maxLength = 5;
+// console.log(string.filter((str) => str.length > maxLength));
+
+// const arr = [1, 2, [3, 4], 5, [6, 7]];         залишити в масиві тільки масиви
+
+// console.log(arr.filter((item) => Array.isArray(item)));
+
+// const numbers = [4, 8, -7, 10, -9, 5];         кількість відємних чисел
+// const negativeNumbers = numbers.filter((number) => number < 0);
+// const result = negativeNumbers.length;
+// console.log(result);
+
+// const numbers = [24, 80, 7, 0, 10, 9, 5];   сума чисел масиву
+// console.log(
+//   numbers.reduce((acc, number) => {
+//     return (acc += number);
+//   }, 0)
+// );
+
+// const numbers = [24, 80, 7, 0, 10, 9, 5];    порахувати перші три елементи до нуля
+// const n = 3;
+// console.log(
+//   numbers.reduce((acc, number, idx) => {
+//     if (number === 0 || idx >= n) {
+//       return acc;
+//     } else {
+//       return (acc += number);
+//     }
+//   }, 0)
+// );
